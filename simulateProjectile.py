@@ -1,10 +1,11 @@
 """ Integration step """
-   
+
+
+        
         
 from math import sin, cos, radians
 from matplotlib import pyplot as plt
 import time  as t_time
-import numpy as np
 class Cannon:
     def __init__(self, x0, y0, v, angle):
             # current x and y coordinates of the missile
@@ -71,21 +72,14 @@ def main():
     x45, y45 = makeShoot(x0, y0, velocity, 45)
     x30, y30 = makeShoot(x0, y0, velocity, 30)
     x60, y60 = makeShoot(x0, y0, velocity, 60)
-   # plt.plot(x45, y45, 'bo-', x30, y30, 'ro-', x60, y60, 'ko-',
-   #     [0, 12], [0, 0], 'k-' # ground
-   #     )
-    plt.plot(x45, y45, 'bo-')
-    plt.pause(1.5)
-    plt.plot(x30, y30, 'ro-')
-    plt.pause(1.5)
-    plt.plot(x60, y60, 'ko-')
-    plt.pause(1.5)
+    plt.plot(x45, y45, 'bo-', x30, y30, 'ro-', x60, y60, 'ko-',
+        [0, 12], [0, 0], 'k-' # ground
+        )
     plt.legend(['45 deg shoot', '30 deg shoot', '60 deg shoot'])
     plt.xlabel('X coordinate (m)')
     plt.ylabel('Y coordinate (m)')
-    plt.draw()
-    t_time.sleep(1.5)
-    plt.pause(1.5)
+    t_time.sleep(1)
+    plt.pause(0.1)
     plt.show()
 
 if __name__ == '__main__':
